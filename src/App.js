@@ -4,14 +4,20 @@ import React from 'react';
 import Menu from './components/Menu.js';
 import Landing from './pages/Landing';
 import Footer from './components/Footer';
+import { Container } from 'reactstrap';
+
+// custom app css
+import "./styles/css/App.css";
 
 function App() {
   return (
     <>
       <Menu />
       {/* pages go here */}
-      <Landing />
-      <Footer />
+      <Container>
+          <Landing />
+          <Footer />
+      </Container> 
     </>
   )
 }

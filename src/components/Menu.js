@@ -9,6 +9,9 @@ import {
   NavLink
 } from 'reactstrap';
 
+// custom css
+import '../styles/css/components/Menu.css';
+
 const Menu = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,7 +19,7 @@ const Menu = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="light" light expand="md" id="topMenu">
         <NavbarBrand href="/">raw dog!</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -31,7 +34,7 @@ const Menu = (props) => {
               <NavLink href="/reviews">About Us</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/login">Start Now! -></NavLink>
+              <NavLink href="#signup-section">Start Now! -></NavLink>
             </NavItem>
           </Nav>
         </Collapse>

@@ -20,7 +20,6 @@ const Meals = () => {
           </p>
         </Container>
       </Jumbotron>
-      <Signup />
     </div>
   );
 };

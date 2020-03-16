@@ -1,5 +1,8 @@
 // import libs/other
 import React, { useState } from "react";
+
+// custom css
+import "../styles/css/components/Reviews.css";
 import {
   Carousel,
   CarouselItem,
@@ -66,14 +69,7 @@ const Example = props => {
   });
 
   return (
-    <div>
-      <style>
-        {`.custom-tag {
-              max-width: 100%;
-              height: 500px;
-              background: black;
-            }`}
-      </style>
+    <div id="reviews">
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
         <CarouselIndicators
           items={items}

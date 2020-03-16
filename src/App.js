@@ -1,16 +1,20 @@
+// import libs/other
 import React, { useState, useEffect } from "react";
-
-// components and pages
-import Menu from "./components/Menu.js";
-import Landing from "./pages/Landing";
-import Footer from "./components/Footer";
 import { Container } from "reactstrap";
+import { Switch, Route } from "react-router-dom";
+
+// import components
+import Menu from "./components/Menu.js";
+import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+
+// import pages
+import Landing from "./pages/Landing";
+import SignInPage from "./pages/SignIn";
+import Meals from "./pages/Meals";
 
 // custom app css
 import "./styles/css/App.css";
-
-// import components
-import Loader from "./components/Loader";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -25,8 +29,14 @@ function App() {
         ) : (
           <div>
             {/* pages switch goes here */}
-            <Landing />
-            <Footer />
+            <Switch>
+              <Route exact path="/" render={props => <Landing />} />
+              <Route
+                path="/signin"
+                render={props => <SignInPage {...props} />}
+              />
+              <Route path="/meals" render={props => <Meals {...props} />} />
+            </Switch>
           </div>
         )}
       </Container>

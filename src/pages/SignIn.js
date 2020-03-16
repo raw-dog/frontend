@@ -1,6 +1,7 @@
+// import libs/other
 import React from "react";
-import { Jumbotron, Container } from "reactstrap";
 
+// import components
 import SignIn from "../components/SignIn";
 
 const SignInPage = () => {

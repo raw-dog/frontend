@@ -37,6 +37,7 @@ function App() {
               />
               <Route path="/meals" render={props => <Meals {...props} />} />
             </Switch>
+            <Footer />
           </div>
         )}
       </Container>

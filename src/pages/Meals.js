@@ -1,7 +1,6 @@
+// import libs/other
 import React from "react";
-import { Jumbotron, Container } from "reactstrap";
-
-import Signup from "../components/Signup";
+import { Jumbotron } from "reactstrap";
 
 const Meals = () => {
   return (
@@ -11,14 +10,12 @@ const Meals = () => {
         className="landingSection"
         fluid
       >
-        <Container fluid>
-          <h1 className="display-3">Better Food For Everydoggy</h1>
-          <p className="lead">
-            Our mission is to create food that is higher quality, lower cost,
-            more varied and pretty much more accessible in every way than
-            traditional dog food.
-          </p>
-        </Container>
+        <h1 className="display-3">Better Food For Everydoggy</h1>
+        <p className="lead">
+          Our mission is to create food that is higher quality, lower cost, more
+          varied and pretty much more accessible in every way than traditional
+          dog food.
+        </p>
       </Jumbotron>
     </div>
   );

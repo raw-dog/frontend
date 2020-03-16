@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // components and pages
 import Menu from "./components/Menu.js";
@@ -13,14 +13,22 @@ import "./styles/css/App.css";
 import Loader from "./components/Loader";
 
 function App() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => setLoaded(true), []);
   return (
     <>
       <Menu />
       <Container>
-        <Loader />
-        {/* pages switch goes here */}
-        <Landing />
-        <Footer />
+        {!loaded ? (
+          <Loader />
+        ) : (
+          <div>
+            {/* pages switch goes here */}
+            <Landing />
+            <Footer />
+          </div>
+        )}
       </Container>
     </>
   );

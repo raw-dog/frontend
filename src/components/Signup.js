@@ -1,51 +1,46 @@
-import React from 'react'
-import {Jumbotron, Container, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import React from "react";
+import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
 
 const Signup = () => {
   return (
-    <div>
-      <Jumbotron id="signup-section" fluid>
-        <h1 className="display-3">Welcome to the future of dog food!</h1>
-        <FormGroup>
-            <Label for="dogNum">How many dogs do you have?</Label>
-          </FormGroup>
-        <Form>
+    <div
+      id="signup"
+      className="fullPageHeight d-flex flex-column align-items-center justify-content-center"
+    >
+      <h2 className="display-5">Getting started is simple!</h2>
+      <Form>
+        <Row form>
+          <Col md={4}>
+            <FormGroup>
+              <Label for="lastName">Your email</Label>
+              <Input type="email" placeholder="ex: example@email.com" />
+            </FormGroup>
+          </Col>
 
-          <FormGroup>
-            <Label for="dogName-1">What is your dogs name?</Label>
-            <Input type="text" name="dogName-1" id="dogName-1" placeholder="ex: Peanut, Keke, Bella" />
-          </FormGroup>
-          <FormGroup>
-            <Label for="examplePassword">Password</Label>
-            <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-          </FormGroup>
-          <FormGroup>
-            <Label for="exampleSelect">Select</Label>
-            <Input type="select" name="select" id="exampleSelect">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </Input>
-          </FormGroup>
-          <FormGroup>
-            <Label for="exampleText">Text Area</Label>
-            <Input type="textarea" name="text" id="exampleText" />
-          </FormGroup>
-          <FormGroup>
-            <Label for="exampleFile">File</Label>
-            <Input type="file" name="file" id="exampleFile" />
-            <FormText color="muted">
-              This is some placeholder block-level help text for the above input.
-              It's a bit lighter and easily wraps to a new line.
-            </FormText>
-          </FormGroup>
-          <Button>Submit</Button>
-        </Form>
-      </Jumbotron>
+          <Col md={4}>
+            <FormGroup>
+              <Label for="password">Pick a password</Label>
+              <Input type="password" name="password" id="password" />
+            </FormGroup>
+          </Col>
+
+          <Col md={4}>
+            <FormGroup>
+              <Label for="passwordConfirm">Confirm your password</Label>
+              <Input
+                type="password"
+                name="passwordConfirm"
+                id="passwordConfirm"
+              />
+            </FormGroup>
+          </Col>
+        </Row>
+        <Button color="primary" size="lg">
+          Sign Up!
+        </Button>
+      </Form>
     </div>
-  )
-}
+  );
+};
 
 export default Signup;

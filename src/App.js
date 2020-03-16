@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 // components and pages
-import Menu from './components/Menu.js';
-import Landing from './pages/Landing';
-import Footer from './components/Footer';
-import { Container } from 'reactstrap';
+import Menu from "./components/Menu.js";
+import Landing from "./pages/Landing";
+import Footer from "./components/Footer";
+import { Container } from "reactstrap";
 
 // custom app css
 import "./styles/css/App.css";
@@ -13,13 +13,13 @@ function App() {
   return (
     <>
       <Menu />
-      {/* pages go here */}
       <Container>
-          <Landing />
-          <Footer />
-      </Container> 
+        {/* pages switch goes here */}
+        <Landing />
+        <Footer />
+      </Container>
     </>
-  )
+  );
 }
 
 export default App;
